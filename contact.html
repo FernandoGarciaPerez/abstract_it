@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us</title>
+		<link rel="icon" type="image/png" href="images/Min-AbstractC.png" />
+
+		<!-- UIKit CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/css/uikit.min.css"
+		/>
+
+		<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit-icons.min.js"></script>
+		<style>
+			/* Estilos generales */
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+
+				overflow-x: hidden; /* Evita el desplazamiento horizontal */
+				position: relative; /* Mantiene la posición relativa del contenido */
+				animation: fadeIn 0.5s ease-out forwards;
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0.5;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+			.hero,
+			.parallax-section {
+				background-image: url("images/tragic-1-city-skyscrapers.jpg"); /* Sustituye esta URL con la de tu imagen de fondo */
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				height: 60vh; /* Ocupar toda la altura de la pantalla */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				text-align: center;
+				position: relative;
+				padding: 0 20px;
+				filter: brightness(80%);
+			}
+			.hero h1,
+			.parallax-section h1 {
+				font-size: 5rem; /* Tamaño grande para el texto principal */
+				font-weight: bold;
+				margin-bottom: 10px;
+				text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Sombra de texto para mejor legibilidad */
+			}
+
+			.hero p,
+			.parallax-section p {
+				font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
+				margin-top: 0;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+			}
+
+			.uk-navbar-container {
+				background: rgba(0, 0, 0, 0); /* Fondo oscuro semitransparente para el navbar */
+				position: fixed; /* Fijar navbar al top de la página */
+				width: 100%;
+				z-index: 1000; /* Asegurar que el navbar esté sobre otros elementos */
+				max-width: 1920px; /* Limitar el ancho máximo en pantallas grandes */
+				margin: 0 auto; /* Centrar el navbar */
+				left: 0;
+				right: 0;
+				padding: 0 20px; /* Agregar padding para separación en los extremos */
+				box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+			}
+
+			.uk-navbar-nav > li > a {
+				color: white !important;
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+
+			.hero h1 {
+				font-size: 4rem; /* Ajustar el tamaño del texto en el hero */
+			}
+			.uk-logo img {
+				height: 8rem; /* Ajusta la altura de la imagen del logo */
+				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+			}
+
+			.parallax-section.contact-bg {
+				background-image: url("https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420229664391-T92QRRS71HMU7ZK1IOM2/Server-Room.jpg"); /* Imagen de la sección de contacto */
+			}
+
+			.contact-form {
+				padding: 40px 20px;
+				max-width: 800px;
+				margin: 0 auto;
+				background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+				border-radius: 10px;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+			}
+
+			@media (max-width: 768px) {
+				.parallax-section {
+					background-attachment: scroll;
+					background-size: cover;
+					height: 50vh; /* Mantiene la mitad de la pantalla en móviles */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="uk-navbar-container uk-navbar-transparent uk-position-top" uk-navbar>
+			<div class="uk-navbar-left">
+				<a href="index.html" class="uk-navbar-item uk-logo">
+					<img src="images/Abstract+Consulting-logo-white.png" alt="Logo" />
+				</a>
+			</div>
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-visible@m">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="employees.html">Employees</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<!-- Botón de menú hamburguesa visible en pantallas pequeñas -->
+				<a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav">
+					<span uk-navbar-toggle-icon></span>
+				</a>
+			</div>
+		</nav>
+		<!-- Offcanvas Menu (Hamburger Menu) -->
+		<div
+			id="offcanvas-nav"
+			uk-offcanvas="mode: slide; flip: true; overlay: true; esc-close: true; bg-close: false;"
+		>
+			<div
+				class="uk-offcanvas-bar"
+				style="
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					text-align: center;
+				"
+			>
+				<!-- Botón de cierre dentro del menú -->
+				<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+				<ul class="uk-nav uk-nav-default" style="font-size: 1.5rem">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="employees.html">Employees</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Parallax Section for Contact -->
+		<div class="parallax-section contact-bg">
+			<div>
+				<h1>Contact Us</h1>
+				<p>We'd love to hear from you! Please fill out the form below to get in touch.</p>
+			</div>
+		</div>
+
+		<!-- Contact Form Section -->
+		<div class="uk-section">
+			<div class="uk-container">
+				<div class="contact-form">
+					<form>
+						<fieldset class="uk-fieldset">
+							<legend class="uk-legend">Contact Form</legend>
+
+							<div class="uk-margin">
+								<input class="uk-input" type="text" placeholder="First Name" required />
+							</div>
+
+							<div class="uk-margin">
+								<input class="uk-input" type="text" placeholder="Last Name" required />
+							</div>
+
+							<div class="uk-margin">
+								<input class="uk-input" type="email" placeholder="Email Address" required />
+							</div>
+
+							<div class="uk-margin">
+								<input class="uk-input" type="text" placeholder="Subject" required />
+							</div>
+
+							<div class="uk-margin">
+								<textarea
+									class="uk-textarea"
+									rows="5"
+									placeholder="Your Message"
+									required
+								></textarea>
+							</div>
+
+							<div class="uk-margin">
+								<button class="uk-button uk-button-secondary" type="submit">Submit</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer class="uk-section uk-section-secondary uk-padding-remove-vertical">
+			<div class="uk-container uk-text-center" style="margin-top: 10vh; margin-bottom: 10vh">
+				<p>&copy; 2024 Abstract Consulting. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>

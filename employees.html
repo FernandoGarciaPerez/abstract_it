@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Join Our Team</title>
+		<link rel="icon" type="image/png" href="images/Min-AbstractC.png" />
+		<!-- UIKit CSS -->
+		<!-- UIKit CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/css/uikit.min.css"
+		/>
+
+		<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit-icons.min.js"></script>
+		<style>
+			/* Estilos generales */
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+				overflow-x: hidden;
+				animation: fadeIn 0.5s ease-out forwards;
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0.5;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+			.uk-navbar-container {
+				background: rgba(0, 0, 0, 0); /* Fondo oscuro semitransparente para el navbar */
+				position: fixed; /* Fijar navbar al top de la página */
+				width: 100%;
+				z-index: 1000; /* Asegurar que el navbar esté sobre otros elementos */
+				max-width: 1920px; /* Limitar el ancho máximo en pantallas grandes */
+				margin: 0 auto; /* Centrar el navbar */
+				left: 0;
+				right: 0;
+				padding: 0 20px; /* Agregar padding para separación en los extremos */
+				box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+			}
+
+			.uk-navbar-nav > li > a {
+				color: white !important;
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+			.uk-logo img {
+				height: 8rem; /* Ajusta la altura de la imagen del logo */
+				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+			}
+
+			.hero {
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center center;
+				height: 100vh; /* Altura al 50% de la pantalla */
+				width: 100%; /* Abarca todo el ancho de la pantalla */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				text-align: center;
+				position: relative;
+				padding: 0 20px;
+				box-sizing: border-box;
+			}
+
+			.hero.employees-bg {
+				background-image: url("https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420233777727-E6Z58H3YE4GJ4JEZFFVZ/Tech.jpg"); /* Imagen de la sección Employees */
+				filter: brightness(80%);
+			}
+
+			.hero-content {
+				background-color: rgba(
+					0,
+					0,
+					0,
+					0.5
+				); /* Fondo semitransparente para mejorar la legibilidad */
+				padding: 40px;
+				border-radius: 10px;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+			}
+
+			.hero-content h1 {
+				margin-bottom: 20px;
+				font-size: 3rem;
+			}
+
+			.hero-content p {
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}
+
+			@media (max-width: 768px) {
+				.hero-content h1 {
+					font-size: 2rem;
+				}
+
+				.hero-content p {
+					font-size: 1.2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="uk-navbar-container uk-navbar-transparent uk-position-top" uk-navbar>
+			<div class="uk-navbar-left">
+				<a href="index.html" class="uk-navbar-item uk-logo">
+					<img src="images/Abstract+Consulting-logo-white.png" alt="Logo" />
+				</a>
+			</div>
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-visible@m">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="employees.html">Employees</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<!-- Botón de menú hamburguesa visible en pantallas pequeñas -->
+				<a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav">
+					<span uk-navbar-toggle-icon></span>
+				</a>
+			</div>
+		</nav>
+		<!-- Offcanvas Menu (Hamburger Menu) -->
+		<div
+			id="offcanvas-nav"
+			uk-offcanvas="mode: slide; flip: true; overlay: true; esc-close: true; bg-close: false;"
+		>
+			<div
+				class="uk-offcanvas-bar"
+				style="
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					text-align: center;
+				"
+			>
+				<!-- Botón de cierre dentro del menú -->
+				<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+				<ul class="uk-nav uk-nav-default" style="font-size: 1.5rem">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="employees.html">Employees</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Hero Section for Employees -->
+		<div class="hero employees-bg">
+			<div class="hero-content">
+				<h1>Join Our Team</h1>
+				<p>
+					We are looking for talented individuals to join our dynamic team. Explore the
+					opportunities and apply today.
+				</p>
+
+				<a href="#apply" class="uk-button uk-button-secondary">Apply Now</a>
+			</div>
+		</div>
+
+		<!-- Apply Section (Placeholder) -->
+		<div id="apply" class="uk-section">
+			<div class="uk-container">
+				<h2>Apply now</h2>
+				<p>
+					We work with the biggest companies, the most important difference makers, and the latest
+					cutting edge technologies.
+				</p>
+				<p>
+					We offer benefits and facilitate any immigration statuses, such as F1, H1B, and EB2 visas.
+					We do whatever it takes to put the best talent with the best companies.
+				</p>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="uk-section uk-section-secondary uk-padding-remove-vertical">
+			<div class="uk-container uk-text-center" style="margin-top: 10vh; margin-bottom: 10vh">
+				<p>&copy; 2024 Abstract Consulting. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>

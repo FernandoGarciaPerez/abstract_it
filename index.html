@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Abstract Consulting</title>
+		<link rel="icon" type="image/png" href="images/Min-AbstractC.png" />
+		<!-- UIKit CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/css/uikit.min.css"
+		/>
+
+		<!-- UIkit JS -->
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit-icons.min.js"></script>
+
+		<style>
+			/* Estilos para la imagen de fondo fija */
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+
+				overflow-x: hidden; /* Evita el desplazamiento horizontal */
+				position: relative; /* Mantiene la posición relativa del contenido */
+				animation: fadeIn 0.5s ease-out forwards;
+			}
+
+			.hero,
+			.parallax-section {
+				background-image: url("images/tragic-1-city-skyscrapers.jpg"); /* Sustituye esta URL con la de tu imagen de fondo */
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				height: 100vh; /* Ocupar toda la altura de la pantalla */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				text-align: center;
+				position: relative;
+				padding: 0 20px;
+				filter: brightness(80%);
+			}
+			.hero h1,
+			.parallax-section h1 {
+				font-size: 5rem; /* Tamaño grande para el texto principal */
+				font-weight: bold;
+				margin-bottom: 10px;
+				text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Sombra de texto para mejor legibilidad */
+			}
+
+			.hero p,
+			.parallax-section p {
+				font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
+				margin-top: 0;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+			}
+			.content {
+				background-color: rgba(
+					255,
+					255,
+					255,
+					0.8
+				); /* Fondo blanco semitransparente para el contenido */
+				padding: 20px;
+			}
+
+			.uk-navbar-container {
+				background: rgba(0, 0, 0, 0); /* Fondo oscuro semitransparente para el navbar */
+				position: fixed; /* Fijar navbar al top de la página */
+				width: 100%;
+				z-index: 1000; /* Asegurar que el navbar esté sobre otros elementos */
+				max-width: 1920px; /* Limitar el ancho máximo en pantallas grandes */
+				margin: 0 auto; /* Centrar el navbar */
+				left: 0;
+				right: 0;
+				padding: 0 20px; /* Agregar padding para separación en los extremos */
+				box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+			}
+
+			.uk-navbar-nav > li > a {
+				color: white !important;
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+
+			.hero h1 {
+				font-size: 4rem; /* Ajustar el tamaño del texto en el hero */
+			}
+			.uk-logo img {
+				height: 8rem; /* Ajusta la altura de la imagen del logo */
+				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+			}
+
+			.parallax-section.section-one {
+				background-image: url("images/Clean.png"); /* Imagen de la primera sección */
+			}
+
+			.parallax-section.section-two {
+				background-image: url("images/lenguajes.jpg"); /* Imagen de la segunda sección */
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0.5;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="uk-navbar-container uk-navbar-transparent uk-position-top" uk-navbar>
+			<div class="uk-navbar-left">
+				<a href="index.html" class="uk-navbar-item uk-logo">
+					<img src="images/Abstract+Consulting-logo-white.png" alt="Logo" />
+				</a>
+			</div>
+			<div class="uk-navbar-right">
+				<ul class="uk-navbar-nav uk-visible@m">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="employees.html">Employees</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<!-- Botón de menú hamburguesa visible en pantallas pequeñas -->
+				<a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav">
+					<span uk-navbar-toggle-icon></span>
+				</a>
+			</div>
+		</nav>
+
+		<!-- Offcanvas Menu (Hamburger Menu) -->
+		<div
+			id="offcanvas-nav"
+			uk-offcanvas="mode: slide; flip: true; overlay: true; esc-close: true; bg-close: false;"
+		>
+			<div
+				class="uk-offcanvas-bar"
+				style="
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					text-align: center;
+				"
+			>
+				<!-- Botón de cierre dentro del menú -->
+				<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+				<ul class="uk-nav uk-nav-default" style="font-size: 1.5rem">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="employees.html">Employees</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+
+		<div class="hero">
+			<div>
+				<h1>Strategic Consulting & Staffing</h1>
+				<p>Service Disabled Veteran Owned Small Business | SDVOSB | Minority Owned</p>
+			</div>
+		</div>
+		<!--
+		// Content 
+		<div class="content uk-section">
+			<div class="uk-container">
+				<h2>About Our Services</h2>
+				<p>
+					This is a sample page with a fixed background image. You can replace this text with your
+					own content.
+				</p>
+				<p>Scroll down to see the parallax effect in action.</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula nisi ut urna
+					aliquet, in laoreet neque faucibus. Morbi volutpat arcu ac orci efficitur, at facilisis
+					libero bibendum. Phasellus ut est ut eros tempor convallis. Etiam nec turpis urna.
+					Curabitur sed lacus et felis mollis convallis. Mauris eu ligula a nisi cursus fringilla
+					nec sit amet leo. Donec posuere ligula non arcu volutpat, non fringilla orci elementum.
+					Cras a ante eros. Quisque malesuada quam at lorem egestas varius.
+				</p>
+				<p>
+					Aliquam erat volutpat. Phasellus consequat eros id tortor bibendum, non venenatis arcu
+					sagittis. Nunc sit amet sodales augue. Donec pharetra eros sit amet sollicitudin egestas.
+					Quisque vitae leo libero. Aliquam erat volutpat. Integer hendrerit, nunc sed tempor
+					sodales, nulla nunc suscipit eros, a consectetur ante dolor non eros. Pellentesque blandit
+					metus vitae facilisis volutpat.
+				</p>
+			</div>
+		</div>
+    -->
+
+		<!-- Image Grid Section -->
+		<div class="uk-section grid-section">
+			<div class="uk-container">
+				<div
+					class="uk-grid uk-grid-match uk-child-width-1-2@s uk-child-width-1-2@m"
+					uk-grid
+					uk-scrollspy="cls: uk-animation-scale-down; target: .uk-card; delay: 200; repeat: false"
+				>
+					<div class="uk-card">
+						<img
+							src="https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420046923913-SYUOR6O4ZPAK5FQVQKKD/CI-Integration.png"
+							alt="Image 2"
+						/>
+					</div>
+					<div class="uk-card">
+						<img
+							src="https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420046942137-XPKIEGXR5B0FG65E0NAC/databaseManagement.jpg"
+							alt="Image 2"
+						/>
+					</div>
+					<div class="uk-card">
+						<img
+							src="https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420057527648-FRR3J75NDXIAA2QYAQIJ/Testing+%281%29.png"
+							alt="Image 3"
+						/>
+					</div>
+					<div class="uk-card">
+						<img
+							src="https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420057776431-2808GKTJ7THDEODAAY1V/Automation.png"
+							alt="Image 4"
+						/>
+					</div>
+				</div>
+			</div>
+			<div class="uk-container">
+				<p>
+					Abstract It provides services in Infrastructure-as-a-Service, AI: Robotic Process
+					Automation, Software Development, DevOps, Automation, DB Administration, Data Center
+					Administration, and Testing.
+				</p>
+			</div>
+		</div>
+		<div class="parallax-section section-one">
+			<div>
+				<p>In a world of ever changing complexity,</p>
+				<h1>Abstract Consulting</h1>
+				<p>provides the simplicity of excellent consultants trained on the latest technologies.</p>
+			</div>
+		</div>
+
+		<!-- Parallax Section 2 -->
+		<div class="parallax-section section-two">
+			<div>
+				<h1>Why Choose Us?</h1>
+				<p>Your success is our priority. We work with you to achieve your goals.</p>
+			</div>
+		</div>
+
+		<!--content information abstract-->
+		<div class="content uk-section" style="margin: 10vh">
+			<div class="uk-container">
+				<p>
+					10 years ago, Datacenter virtualization was the latest in infrastructure. Now it's a
+					dinosaur in a world of Hadoop, Datalake, Kubernetes, IaC, AI:Robotic Process Automation ,
+					and many other cutting edge infrastructure solutions. Absract Consulting helps you bring
+					order and scale out capabilities by providing solutions and talented engineers trained on
+					the latest technologies.
+				</p>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="uk-section uk-section-secondary uk-padding-remove-vertical">
+			<div class="uk-container uk-text-center" style="margin-top: 10vh; margin-bottom: 10vh">
+				<p>&copy; 2024 Abstract Consulting. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
