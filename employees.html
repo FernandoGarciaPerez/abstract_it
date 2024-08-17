@@ -50,17 +50,45 @@
 				font-size: 1.2rem;
 				font-weight: 500;
 			}
-			.uk-logo img {
-				height: 8rem; /* Ajusta la altura de la imagen del logo */
-				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+			/*.uk-logo img {
+				height: 8rem; /* Ajusta la altura de la imagen del logo 
+				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido 
+			}*/
+			@media (min-width: 769px) {
+				.uk-logo img {
+					height: 8rem; /* Ajusta la altura de la imagen del logo */
+					vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+				}
+				.hero {
+					background-size: cover;
+					background-attachment: fixed;
+					background-position: center center;
+					height: 100vh; /* Altura al 50% de la pantalla */
+					width: 100%; /* Abarca todo el ancho de la pantalla */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
+					text-align: center;
+					position: relative;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
+				.hero-content h1 {
+					font-size: 2rem;
+				}
+
+				.hero-content p {
+					font-size: 1.2rem;
+				}
 			}
 
-			.hero {
+			/*.hero {
 				background-size: cover;
 				background-attachment: fixed;
 				background-position: center center;
-				height: 100vh; /* Altura al 50% de la pantalla */
-				width: 100%; /* Abarca todo el ancho de la pantalla */
+				height: 100vh; /* Altura al 50% de la pantalla 
+				width: 100%; /* Abarca todo el ancho de la pantalla */ /*
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -69,7 +97,7 @@
 				position: relative;
 				padding: 0 20px;
 				box-sizing: border-box;
-			}
+			}*/
 
 			.hero.employees-bg {
 				background-image: url("https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420233777727-E6Z58H3YE4GJ4JEZFFVZ/Tech.jpg"); /* Imagen de la sección Employees */
@@ -99,6 +127,26 @@
 			}
 
 			@media (max-width: 768px) {
+				.uk-logo img {
+					height: 5rem; /* Ajusta la altura de la imagen del logo */
+					vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+					margin-top: 1rem;
+				}
+				.hero {
+					background-size: cover;
+					background-attachment: local;
+					background-position: center center;
+					height: 100vh; /* Altura al 50% de la pantalla */
+					width: 100%; /* Abarca todo el ancho de la pantalla */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
+					text-align: center;
+					position: relative;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
 				.hero-content h1 {
 					font-size: 2rem;
 				}
@@ -113,15 +161,15 @@
 		<!-- Navbar -->
 		<nav class="uk-navbar-container uk-navbar-transparent uk-position-top" uk-navbar>
 			<div class="uk-navbar-left">
-				<a href="index.html" class="uk-navbar-item uk-logo">
+				<a href="index" class="uk-navbar-item uk-logo">
 					<img src="images/Abstract+Consulting-logo-white.png" alt="Logo" />
 				</a>
 			</div>
 			<div class="uk-navbar-right">
 				<ul class="uk-navbar-nav uk-visible@m">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="employees.html">Employees</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="employees">Employees</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 				<!-- Botón de menú hamburguesa visible en pantallas pequeñas -->
 				<a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav">
@@ -149,9 +197,9 @@
 				<button class="uk-offcanvas-close" type="button" uk-close></button>
 
 				<ul class="uk-nav uk-nav-default" style="font-size: 1.5rem">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="employees.html">Employees</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="employees">Employees</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>

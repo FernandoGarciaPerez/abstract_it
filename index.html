@@ -6,6 +6,7 @@
 		<title>Abstract Consulting</title>
 		<link rel="icon" type="image/png" href="images/Min-AbstractC.png" />
 		<!-- UIKit CSS -->
+		<!-- UIKit CSS -->
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/css/uikit.min.css"
@@ -14,56 +15,21 @@
 		<!-- UIkit JS -->
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit-icons.min.js"></script>
-
 		<style>
-			/* Estilos para la imagen de fondo fija */
+			/* Estilos generales */
 			body {
 				margin: 0;
 				font-family: Arial, sans-serif;
-
-				overflow-x: hidden; /* Evita el desplazamiento horizontal */
-				position: relative; /* Mantiene la posición relativa del contenido */
+				overflow-x: hidden;
 				animation: fadeIn 0.5s ease-out forwards;
 			}
-
-			.hero,
-			.parallax-section {
-				background-image: url("images/tragic-1-city-skyscrapers.jpg"); /* Sustituye esta URL con la de tu imagen de fondo */
-				background-size: cover;
-				background-attachment: fixed;
-				background-position: center;
-				height: 100vh; /* Ocupar toda la altura de la pantalla */
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color: white;
-				text-align: center;
-				position: relative;
-				padding: 0 20px;
-				filter: brightness(80%);
-			}
-			.hero h1,
-			.parallax-section h1 {
-				font-size: 5rem; /* Tamaño grande para el texto principal */
-				font-weight: bold;
-				margin-bottom: 10px;
-				text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Sombra de texto para mejor legibilidad */
-			}
-
-			.hero p,
-			.parallax-section p {
-				font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
-				margin-top: 0;
-				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto */
-			}
-			.content {
-				background-color: rgba(
-					255,
-					255,
-					255,
-					0.8
-				); /* Fondo blanco semitransparente para el contenido */
-				padding: 20px;
+			@keyframes fadeIn {
+				0% {
+					opacity: 0.5;
+				}
+				100% {
+					opacity: 1;
+				}
 			}
 
 			.uk-navbar-container {
@@ -83,29 +49,118 @@
 				color: white !important;
 				font-size: 1.2rem;
 				font-weight: 500;
+				text-shadow: 2px 2px 5px rgba(29, 29, 29, 0.7);
 			}
-
-			.hero h1 {
-				font-size: 4rem; /* Ajustar el tamaño del texto en el hero */
-			}
-			.uk-logo img {
-				height: 8rem; /* Ajusta la altura de la imagen del logo */
-				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
-			}
-
-			.parallax-section.section-one {
-				background-image: url("images/Clean.png"); /* Imagen de la primera sección */
-			}
-
-			.parallax-section.section-two {
-				background-image: url("images/lenguajes.jpg"); /* Imagen de la segunda sección */
-			}
-			@keyframes fadeIn {
-				0% {
-					opacity: 0.5;
+			/*.uk-logo img {
+				height: 8rem; /* Ajusta la altura de la imagen del logo 
+				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido 
+			}*/
+			@media (min-width: 769px) {
+				.uk-logo img {
+					height: 8rem; /* Ajusta la altura de la imagen del logo */
+					vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
 				}
-				100% {
-					opacity: 1;
+				.hero {
+					background-size: cover;
+					background-attachment: fixed;
+					background-position: center center;
+					height: 100vh; /* Altura al 50% de la pantalla */
+					width: 100%; /* Abarca todo el ancho de la pantalla */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
+					text-align: center;
+					position: relative;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
+			}
+
+			/*.hero {
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center center;
+				height: 100vh; /* Altura al 50% de la pantalla 
+				width: 100%; /* Abarca todo el ancho de la pantalla */ /*
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				text-align: center;
+				position: relative;
+				padding: 0 20px;
+				box-sizing: border-box;
+			}*/
+
+			.hero.index-bg {
+				background-image: url("images/tragic-1-city-skyscrapers.jpg"); /* Imagen de la sección Employees */
+				filter: brightness(80%);
+			}
+
+			.hero-content {
+				/* Fondo semitransparente para mejorar la legibilidad */
+				padding: 40px;
+				border-radius: 10px;
+			}
+
+			.hero-content h1 {
+				font-size: 5rem; /* Tamaño grande para el texto principal */
+				font-weight: bold;
+				margin-bottom: 10px;
+				color: white;
+				text-shadow: 2px 2px 5px rgba(29, 29, 29, 0.7); /* Sombra de texto para mejor legibilidad */
+			}
+
+			.hero-content p {
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}
+			.section-two .hero-content p {
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+				color: black;
+				text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+			}
+
+			.hero.section-one {
+				background-image: url("images/Clean.png"); /* Imagen de la sección Employees */
+				filter: brightness(80%);
+			}
+			.hero.section-two {
+				background-image: url("images/lenguajes.jpg"); /* Imagen de la sección Employees */
+				filter: brightness(80%);
+			}
+
+			@media (max-width: 768px) {
+				.uk-logo img {
+					height: 6rem; /* Ajusta la altura de la imagen del logo */
+					vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+					margin-top: 1rem;
+				}
+				.hero {
+					background-size: cover;
+					background-attachment: local;
+					background-position: center center;
+					height: 100vh; /* Altura al 50% de la pantalla */
+					width: 100%; /* Abarca todo el ancho de la pantalla */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
+					text-align: center;
+					position: relative;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
+				.section-two .hero-content p {
+					font-size: 1.2rem;
+					color: rgb(0, 0, 0);
+					text-shadow: 2px 2px 5px rgba(29, 29, 29, 0.7);
+				}
+
+				.hero-content p {
+					font-size: 1.2rem;
 				}
 			}
 		</style>
@@ -114,15 +169,15 @@
 		<!-- Navbar -->
 		<nav class="uk-navbar-container uk-navbar-transparent uk-position-top" uk-navbar>
 			<div class="uk-navbar-left">
-				<a href="index.html" class="uk-navbar-item uk-logo">
+				<a href="index" class="uk-navbar-item uk-logo">
 					<img src="images/Abstract+Consulting-logo-white.png" alt="Logo" />
 				</a>
 			</div>
 			<div class="uk-navbar-right">
 				<ul class="uk-navbar-nav uk-visible@m">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="employees.html">Employees</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="employees">Employees</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 				<!-- Botón de menú hamburguesa visible en pantallas pequeñas -->
 				<a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav">
@@ -130,7 +185,6 @@
 				</a>
 			</div>
 		</nav>
-
 		<!-- Offcanvas Menu (Hamburger Menu) -->
 		<div
 			id="offcanvas-nav"
@@ -151,49 +205,20 @@
 				<button class="uk-offcanvas-close" type="button" uk-close></button>
 
 				<ul class="uk-nav uk-nav-default" style="font-size: 1.5rem">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="employees.html">Employees</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="employees">Employees</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 
-		<!-- Hero Section -->
-
-		<div class="hero">
-			<div>
+		<!-- Hero Section for index -->
+		<div class="hero index-bg">
+			<div class="hero-content">
 				<h1>Strategic Consulting & Staffing</h1>
 				<p>Service Disabled Veteran Owned Small Business | SDVOSB | Minority Owned</p>
 			</div>
 		</div>
-		<!--
-		// Content 
-		<div class="content uk-section">
-			<div class="uk-container">
-				<h2>About Our Services</h2>
-				<p>
-					This is a sample page with a fixed background image. You can replace this text with your
-					own content.
-				</p>
-				<p>Scroll down to see the parallax effect in action.</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula nisi ut urna
-					aliquet, in laoreet neque faucibus. Morbi volutpat arcu ac orci efficitur, at facilisis
-					libero bibendum. Phasellus ut est ut eros tempor convallis. Etiam nec turpis urna.
-					Curabitur sed lacus et felis mollis convallis. Mauris eu ligula a nisi cursus fringilla
-					nec sit amet leo. Donec posuere ligula non arcu volutpat, non fringilla orci elementum.
-					Cras a ante eros. Quisque malesuada quam at lorem egestas varius.
-				</p>
-				<p>
-					Aliquam erat volutpat. Phasellus consequat eros id tortor bibendum, non venenatis arcu
-					sagittis. Nunc sit amet sodales augue. Donec pharetra eros sit amet sollicitudin egestas.
-					Quisque vitae leo libero. Aliquam erat volutpat. Integer hendrerit, nunc sed tempor
-					sodales, nulla nunc suscipit eros, a consectetur ante dolor non eros. Pellentesque blandit
-					metus vitae facilisis volutpat.
-				</p>
-			</div>
-		</div>
-    -->
 
 		<!-- Image Grid Section -->
 		<div class="uk-section grid-section">
@@ -237,26 +262,26 @@
 				</p>
 			</div>
 		</div>
-		<div class="parallax-section section-one">
-			<div>
+
+		<!-- hero seccion 1-->
+		<div class="hero section-one">
+			<div class="hero-content">
 				<p>In a world of ever changing complexity,</p>
 				<h1>Abstract Consulting</h1>
 				<p>provides the simplicity of excellent consultants trained on the latest technologies.</p>
 			</div>
 		</div>
-
-		<!-- Parallax Section 2 -->
-		<div class="parallax-section section-two">
-			<div>
+		<!-- hero seccion 2-->
+		<div class="hero section-two">
+			<div class="hero-content">
 				<h1>Why Choose Us?</h1>
 				<p>Your success is our priority. We work with you to achieve your goals.</p>
 			</div>
 		</div>
-
 		<!--content information abstract-->
-		<div class="content uk-section" style="margin: 10vh">
+		<div class="content uk-section" style="margin: 5vh">
 			<div class="uk-container">
-				<p>
+				<p style="text-align: center">
 					10 years ago, Datacenter virtualization was the latest in infrastructure. Now it's a
 					dinosaur in a world of Hadoop, Datalake, Kubernetes, IaC, AI:Robotic Process Automation ,
 					and many other cutting edge infrastructure solutions. Absract Consulting helps you bring

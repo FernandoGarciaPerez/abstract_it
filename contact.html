@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact Us</title>
 		<link rel="icon" type="image/png" href="images/Min-AbstractC.png" />
-
+		<!-- UIKit CSS -->
 		<!-- UIKit CSS -->
 		<link
 			rel="stylesheet"
@@ -20,9 +20,7 @@
 			body {
 				margin: 0;
 				font-family: Arial, sans-serif;
-
-				overflow-x: hidden; /* Evita el desplazamiento horizontal */
-				position: relative; /* Mantiene la posición relativa del contenido */
+				overflow-x: hidden;
 				animation: fadeIn 0.5s ease-out forwards;
 			}
 			@keyframes fadeIn {
@@ -32,37 +30,6 @@
 				100% {
 					opacity: 1;
 				}
-			}
-
-			.hero,
-			.parallax-section {
-				background-image: url("images/tragic-1-city-skyscrapers.jpg"); /* Sustituye esta URL con la de tu imagen de fondo */
-				background-size: cover;
-				background-attachment: fixed;
-				background-position: center;
-				height: 60vh; /* Ocupar toda la altura de la pantalla */
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color: white;
-				text-align: center;
-				position: relative;
-				padding: 0 20px;
-				filter: brightness(80%);
-			}
-			.hero h1,
-			.parallax-section h1 {
-				font-size: 5rem; /* Tamaño grande para el texto principal */
-				font-weight: bold;
-				margin-bottom: 10px;
-				text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Sombra de texto para mejor legibilidad */
-			}
-
-			.hero p,
-			.parallax-section p {
-				font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
-				margin-top: 0;
-				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto */
 			}
 
 			.uk-navbar-container {
@@ -83,17 +50,70 @@
 				font-size: 1.2rem;
 				font-weight: 500;
 			}
-
-			.hero h1 {
-				font-size: 4rem; /* Ajustar el tamaño del texto en el hero */
+			/*.uk-logo img {
+				height: 8rem; /* Ajusta la altura de la imagen del logo 
+				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido 
+			}*/
+			@media (min-width: 769px) {
+				.uk-logo img {
+					height: 8rem; /* Ajusta la altura de la imagen del logo */
+					vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+				}
+				.hero {
+					background-size: cover;
+					background-attachment: fixed;
+					background-position: center center;
+					height: 50vh; /* Altura al 50% de la pantalla */
+					width: 100%; /* Abarca todo el ancho de la pantalla */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
+					text-align: center;
+					position: relative;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
 			}
-			.uk-logo img {
-				height: 8rem; /* Ajusta la altura de la imagen del logo */
-				vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+
+			/*.hero {
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center center;
+				height: 100vh; /* Altura al 50% de la pantalla 
+				width: 100%; /* Abarca todo el ancho de la pantalla */ /*
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				text-align: center;
+				position: relative;
+				padding: 0 20px;
+				box-sizing: border-box;
+			}*/
+
+			.hero.contact-bg {
+				background-image: url("https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420229664391-T92QRRS71HMU7ZK1IOM2/Server-Room.jpg"); /* Imagen de la sección Employees */
+				filter: brightness(80%);
 			}
 
-			.parallax-section.contact-bg {
-				background-image: url("https://images.squarespace-cdn.com/content/v1/54a371b9e4b00bf98fe41481/1420229664391-T92QRRS71HMU7ZK1IOM2/Server-Room.jpg"); /* Imagen de la sección de contacto */
+			.hero-content {
+				/* Fondo semitransparente para mejorar la legibilidad */
+				padding: 40px;
+				border-radius: 10px;
+			}
+
+			.hero-content h1 {
+				font-size: 5rem; /* Tamaño grande para el texto principal */
+				font-weight: bold;
+				margin-bottom: 10px;
+				color: white;
+				text-shadow: 2px 2px 5px rgba(29, 29, 29, 0.7); /* Sombra de texto para mejor legibilidad */
+			}
+
+			.hero-content p {
+				font-size: 1.5rem;
+				margin-bottom: 30px;
 			}
 
 			.contact-form {
@@ -106,10 +126,34 @@
 			}
 
 			@media (max-width: 768px) {
-				.parallax-section {
-					background-attachment: scroll;
+				.uk-logo img {
+					height: 5rem; /* Ajusta la altura de la imagen del logo */
+					vertical-align: middle; /* Alinea la imagen con el texto si hay algún otro contenido */
+					margin-top: 1rem;
+				}
+				.hero {
 					background-size: cover;
-					height: 50vh; /* Mantiene la mitad de la pantalla en móviles */
+					background-attachment: local;
+					background-position: center center;
+					height: 60vh; /* Altura al 50% de la pantalla */
+					width: 100%; /* Abarca todo el ancho de la pantalla */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: white;
+					text-align: center;
+					position: relative;
+					padding: 0 20px;
+					box-sizing: border-box;
+				}
+				.hero-content h1 {
+					font-size: 4rem;
+					color: white;
+					text-shadow: 2px 2px 5px rgba(29, 29, 29, 0.7);
+				}
+
+				.hero-content p {
+					font-size: 1.2rem;
 				}
 			}
 		</style>
@@ -118,15 +162,15 @@
 		<!-- Navbar -->
 		<nav class="uk-navbar-container uk-navbar-transparent uk-position-top" uk-navbar>
 			<div class="uk-navbar-left">
-				<a href="index.html" class="uk-navbar-item uk-logo">
+				<a href="index" class="uk-navbar-item uk-logo">
 					<img src="images/Abstract+Consulting-logo-white.png" alt="Logo" />
 				</a>
 			</div>
 			<div class="uk-navbar-right">
 				<ul class="uk-navbar-nav uk-visible@m">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="employees.html">Employees</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="employees">Employees</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 				<!-- Botón de menú hamburguesa visible en pantallas pequeñas -->
 				<a class="uk-navbar-toggle uk-hidden@m" href="#" uk-toggle="target: #offcanvas-nav">
@@ -154,16 +198,16 @@
 				<button class="uk-offcanvas-close" type="button" uk-close></button>
 
 				<ul class="uk-nav uk-nav-default" style="font-size: 1.5rem">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="employees.html">Employees</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="employees">Employees</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 
-		<!-- Parallax Section for Contact -->
-		<div class="parallax-section contact-bg">
-			<div>
+		<!-- Hero Section for Employees -->
+		<div class="hero contact-bg">
+			<div class="hero-content">
 				<h1>Contact Us</h1>
 				<p>We'd love to hear from you! Please fill out the form below to get in touch.</p>
 			</div>
@@ -210,6 +254,7 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- Footer -->
 		<footer class="uk-section uk-section-secondary uk-padding-remove-vertical">
 			<div class="uk-container uk-text-center" style="margin-top: 10vh; margin-bottom: 10vh">
